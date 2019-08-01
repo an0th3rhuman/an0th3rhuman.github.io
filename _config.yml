@@ -7,7 +7,7 @@ title: Raghul M
 email:
 description: A person who just love to steal cookies.
 url: # the base hostname & protocol for your site
-keywords: ["blog", "jekyll"]
+keywords: ["blog", "web-security"]
 
 #
 ###################################
@@ -33,7 +33,7 @@ kramdown:
 ####################################
 #
 owner:
-  name: Raghul M
+  name: "Raghul M"
   avatar: leonids-logo.png
   job: "Security Analyst at EY"
   bio: "I kill bugs and live by them."
