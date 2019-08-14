@@ -1,4 +1,4 @@
 - name: Secure Copier
   descr: "Secure copier is a tool which secure the data transfer between two airgap system securly. This project is done as part of SMART INDIA Hackathon 2017 for Ministry of Defense India. This project secured first place in the hackathon ."
   image: pong.png
-  github: https://github.com/renyuanz/leonids
+  #github: https://github.com/renyuanz/leonids
