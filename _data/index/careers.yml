@@ -1,16 +1,16 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
-- name: Google
-  link: http://www.google.com/
-  date: July 2017 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
-  job: Programming Internship
+- name: EY
+  link: https://www.ey.com
+  date: Jun 2019 - <i class="fa fa-clock-o" aria-hidden="true" title="Until Now"></i>
+  job: Cyber Security Analyst
 
-- name: Facebook
-  link: http://www.facebook.com/
-  date: May 2014 - July 2017
-  job: Web Assistant
+- name: EY
+  link: https://www.ey.com/
+  date: Jan 2019 - Jun 2019
+  job: Cyber security Intern
 
-- name: SAP
-  link: https://www.sap.com/
-  date: 2010 - 2014
-  job: Software Developer
+- name: IIT Kanpur
+  link: https://security.cse.iitk.ac.in/node/400
+  date: May 2018 - June 2018
+  job: Student Research Assosiate
