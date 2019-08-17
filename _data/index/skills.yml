@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: Web and Web service PT, Active Directory PT, Python, Reverse Engineering, 
-percentage: 100, 65, 70, 40
+aspects: Web and Web service PT, Active Directory PT, Python, Reverse Engineering, WiFi PT, Android PT
+percentage: 100, 65, 70, 40,70,80
