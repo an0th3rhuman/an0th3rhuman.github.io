@@ -5,33 +5,15 @@ date:   2020-02-05 08:07:19
 categories: [buffer-overflow,oscp-prep]
 comments: true
 ---
-## How the memory is organised?
 
-![memory-structure](memory-img.png)
-
-The memory is orgainsed in the way kernel at top and text is at bottom. Since it is stack bufferoverflow we are concentrating on stack.
-
-<!--more-->
-## How the stack bufferoverflow works?
-
-![stack-img](stack-img.png)
-
-To make things clear from the above picture the stack is organised like
-
-ESP ---> Buffer space ---> EBP ---> EIP ---> PTR to arg
-
-ESP is the current stack pointer. EBP is the base pointer for the current stack frame.
-
-When you call a function, typically space is reserved on the stack for local variables. This space is usually referenced via EBP (all local variables and function parameters are a known constant offset from this register for the duration of the function call.) ESP, on the other hand, will change during the function call as other functions are called, or as temporary stack space is used for partial operation results.
-
-In stack bufferoverflow, we are going to overflow the buffer space such that it overflow to EBP and to EIP. And finally we will find the exact offset to control EIP to inject our malcious shell code.
 
 To demonstrate binary used is dostackbufferoverflowgood.exe
 
 ## Steps to be followed for smashing stack bufferoverflow
 
-Fuzzing --> finding offset --> Finding bad character --> Controlling EIP --> Generating shell code
+Fuzzing --> finding offset --> Finding bad character --> RET to 'JMP ESP' --> Generating shell code
 
+<!--more->
 #### Step 1: Fuzzing
 
 In this step, we just need to find the buffer length or offset which crash the application and overwrite the EIP.
