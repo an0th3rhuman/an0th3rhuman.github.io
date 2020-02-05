@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What is stack bufferoverflow? And steps to be followed to smash it!(dostackbufferoverflowgood)"
+title:  "Writeup - dostackbufferoverflow.exe"
 date:   2020-02-05 08:07:19
 categories: [buffer-overflow,oscp-prep]
 comments: true
