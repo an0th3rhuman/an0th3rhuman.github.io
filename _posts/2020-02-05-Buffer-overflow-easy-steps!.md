@@ -13,7 +13,7 @@ To demonstrate binary used is dostackbufferoverflowgood.exe
 
 Fuzzing --> finding offset --> Finding bad character --> RET to 'JMP ESP' --> Generating shell code
 
-<!--more->
+<!--more-->
 #### Step 1: Fuzzing
 
 In this step, we just need to find the buffer length or offset which crash the application and overwrite the EIP.
