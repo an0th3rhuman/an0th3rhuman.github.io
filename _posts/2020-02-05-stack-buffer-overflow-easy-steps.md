@@ -7,7 +7,9 @@ comments: true
 ---
 
 
-The blog is written in the assumstion you are already familiar with mona.py and Immunity debugger. If you are not familiar check out this cool blog first. https://www.corelan.be/index.php/2011/07/14/mona-py-the-manual/
+The blog is written in the assumstion you are already familiar with mona.py and Immunity debugger. If you are not familiar check out this cool blog [here](https://www.corelan.be/index.php/2011/07/14/mona-py-the-manual/)
+
+
 **Easy steps for smashing stack buffer overflow:**
 
 Fuzzing --> finding offset --> Finding bad character --> RET to 'JMP ESP' --> Generating shell code
