@@ -18,11 +18,11 @@ Let's get started!
  
 Started with [nmapAutomater](https://github.com/21y4d/nmapAutomator) for recon and found FTP port open with anonymous access.
 
-![nmap-result](https://raghul.ml/img/nmap-allowed-anonymous.png)
+![nmap-result](https://www.raghul.ml/img/nmap-allowed-anonymous.png)
 
 The machine also has port 80 open which looks like default IIS page.
 
-![http-site](https://raghul.ml/img/http-site.png)
+![http-site](https://www.raghul.ml/img/http-site.png)
 
 Whatever uploaded in the FTP can be accessed from HTTP.
 
@@ -34,7 +34,7 @@ Creating aspx reverse shell using msfvenom.
 
 Uploading the aspx file to the ftp
 
-![uploading shell](https://raghul.ml/img/uploading-shell-anonymous-ftp.png)
+![uploading shell](https://www.raghul.ml/img/uploading-shell-anonymous-ftp.png)
 
 Accessing the shell from the HTTP to get the reverse tcp connection. Spawn the listener in attacker machine
 
@@ -44,7 +44,7 @@ Got shell. But the user was IIS user and dosent have user or admin privilege.
 
 ### Privilege escalation
 
-![windows shell system info](https://raghul.ml/img/windows_shell_systeminfo.png)
+![windows shell system info](https://www.raghul.ml/img/windows_shell_systeminfo.png)
 
 From the system info we can understand the following:
 1. Os Name : Windows 7 enterprise 
@@ -54,41 +54,41 @@ From the system info we can understand the following:
 
 Googled the OS name and its version for corresponding CVE and found a exploit on exploitdb.
 
-![priv-exec](https://raghul.ml/img/priv-esc-exploitdb.png)
+![priv-exec](https://www.raghul.ml/img/priv-esc-exploitdb.png)
 
 Use `searchsploit` to copy the exploit locally.
 
-![searchsploit](https://raghul.ml/img/searchsploit.png)
+![searchsploit](https://www.raghul.ml/img/searchsploit.png)
 
 Method to build the exe is given in the comment section of the exploit
 
-![how to build](https://raghul.ml/img/how-to-build.png)
+![how to build](https://www.raghul.ml/img/how-to-build.png)
 
 Compiling the exe file and creating python shell to transfer the exe file.
 
-![compiling](https://raghul.ml/img/compiling%20and%20executing%20binary.png)
+![compiling](https://www.raghul.ml/img/compiling%20and%20executing%20binary.png)
 
 Using powershell, Downloading the exe file to the victim machine.
 
-![powershell to donwload the file](https://raghul.ml/img/Download-files-in-windows.png)
+![powershell to donwload the file](https://www.raghul.ml/img/Download-files-in-windows.png)
 
 Executing the exe file
 
-![priv exec](https://raghul.ml/img/executing-shell-gaining-system-priv.png)
+![priv exec](https://www.raghul.ml/img/executing-shell-gaining-system-priv.png)
 
 ##### Owning User
 
-![owning user](https://raghul.ml/img/owning-user.png)
+![owning user](https://www.raghul.ml/img/owning-user.png)
 
 ##### Owning Administrator
-![owning root](https://raghul.ml/img/owning-root.png)
+![owning root](https://www.raghul.ml/img/owning-root.png)
 
 
 ### Cleanup
 
 1. Deleting aspx shell from FTP
 
-![ftp-cleanup](https://raghul.ml/img/cleanup-ftp.png)
+![ftp-cleanup](https://www.raghul.ml/img/cleanup-ftp.png)
 
 2. Deleted privexec exe from the machine
 
