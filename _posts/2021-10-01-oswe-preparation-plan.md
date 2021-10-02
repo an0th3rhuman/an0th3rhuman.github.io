@@ -17,6 +17,16 @@ During my OSCP exam, I realized, I could have prepared better, planned better, w
 
 **OSWE Exam Prep Todo:**
 
+**Preprep :**
+
+\[ \] - Learn Nodejs
+
+\[ \] - Learn PHP
+
+\[ \] - Learn C#
+
+\[ \] - Learn Java
+
 **Step 1:**
 
 \[ \] - Watch video
@@ -33,20 +43,20 @@ During my OSCP exam, I realized, I could have prepared better, planned better, w
 
 \[ \] - Find interesting vulns in open source software
 
-   \[ \] - Analyse Java Android apps
+\[ \] - Analyse Java Android apps
 
-   \[ \] - Node JS
+\[ \] - Node JS
 
-   \[ \] - C#(.net)
+\[ \] - C#(.net)
 
-   \[ \] - PHP
+\[ \] - PHP
 
 \[ \] - Use Regex to exploit vulnerable application
 
-   \[ \] - Webgoat (Java)
+\[ \] - Webgoat (Java)
 
-   \[ \] - Juice shop (Java script)
+\[ \] - Juice shop (Java script)
 
-   \[ \] - Mutilldae (PHP)
+\[ \] - Mutilldae (PHP)
 
-   \[ \] - .NetGoat (C#)
+\[ \] - .NetGoat (C#)
