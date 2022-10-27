@@ -17,5 +17,3 @@ fields:
 - type: boolean
   name: comments
   label: comments
-pages:
-- _posts/2021-10-01-oswe-preparation-plan.md
