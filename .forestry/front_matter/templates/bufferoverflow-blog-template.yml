@@ -17,3 +17,5 @@ fields:
 - type: boolean
   name: comments
   label: comments
+pages:
+- _posts/portswigger-academy-challenge-for-pentest.md
