@@ -65,6 +65,12 @@ Check wayback urls to find something interesting
 
     waybackurls <domain_name> | anew <domain_name_wayback>
 
+Crawl the site to find something intresting:
+
+```bash
+echo "domain_name" | httpx | katana | anew domainname_crawl.txt
+```
+
 ### Step 5:
 
 Scan for the parameter
