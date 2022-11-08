@@ -1,5 +1,5 @@
 ---
-layout: pages
+layout: posts
 title: My recon workflow for Bugbounty hunting
 date: 2022-11-07 18:30:00 +0000
 categories:
