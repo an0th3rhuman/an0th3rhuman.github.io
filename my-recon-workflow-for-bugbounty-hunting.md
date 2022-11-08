@@ -7,6 +7,7 @@ categories:
 - recon
 - bugbounty
 comments: true
+published: false
 
 ---
 This blog post contains my recon workflow in step by step process. My recon process is more of information gathering. I keep changing this blog post based on my recon workflow.
