@@ -19,4 +19,5 @@ fields:
   label: comments
 pages:
 - _posts/2022-10-26-portswigger-academy-challenge-for-pentest.md
+- _posts/learning-golang-part-1.md
 - _posts/my-bugbounty-recon-workflow.md
